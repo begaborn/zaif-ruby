@@ -75,6 +75,14 @@ module Zaif
             return json
         end
 
+        # Get user infomation without transactions.
+        # Need api key.
+        # @return [Hash] Infomation of user.
+        def get_info_without_transactions
+            json = post_ssl(@zaif_trade_url, "get_info2", {})
+            return json
+        end
+
         # Get your trade history.
         # Avalible options: from. count, from_id, end_id, order, since, end, currency_pair
         # Need api key.
